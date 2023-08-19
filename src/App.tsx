@@ -47,6 +47,7 @@ function App() {
 							Total Aseo:
 						</span>
 						<input
+							required={true}
 							type='number'
 							className='form-control bg-dark text-white'
 							placeholder='0'
@@ -65,6 +66,7 @@ function App() {
 							Total Agua:
 						</span>
 						<input
+							required={true}
 							type='number'
 							className='form-control bg-dark text-white'
 							placeholder='0'
@@ -82,6 +84,7 @@ function App() {
 							Total Metros:
 						</span>
 						<input
+							required={true}
 							type='number'
 							className='form-control bg-dark text-white'
 							placeholder='0'
@@ -99,6 +102,7 @@ function App() {
 							Piso 1 Metros
 						</span>
 						<input
+							required={true}
 							type='number'
 							className='form-control bg-dark text-white'
 							placeholder='0'
@@ -116,6 +120,7 @@ function App() {
 							Piso 2 Metros:
 						</span>
 						<input
+							required={true}
 							type='number'
 							className='form-control bg-dark text-white'
 							placeholder='0'
@@ -147,29 +152,31 @@ function App() {
 						<div className='row'>
 							<div className='col lg'>
 								<div className='text-left'> Piso 1: </div>
-								<div>Cleaning Services: {Math.ceil(totalCleaningServices / 3)}</div>
-								<div>Water: {Math.ceil(floorOne.water)}</div>
+								<div style={{ color: 'green' }}>Aseo: {Math.ceil(totalCleaningServices / 3)}</div>
+								<div style={{ color: 'blue' }}>Agua: {Math.ceil(floorOne.water)}</div>
 								<div className='fs-4 text-danger text-center'>
-									Total: <br />
-									{Math.ceil(floorOne.water + totalCleaningServices / 3)}
+									<div style={{ color: 'red' }}>Total: </div>
+									<div>{Math.ceil(floorOne.water + totalCleaningServices / 3)}</div>
 								</div>
 							</div>
+							<br />
 							<div className='col'>
-								Piso 2:
-								<div>Cleaning Services: {Math.ceil(totalCleaningServices / 3)}</div>
-								<div>Water: {Math.ceil(floorTwo.water)}</div>
-								<div className='fs-4 text-danger text-center'>
-									Total: <br />
-									{Math.ceil(floorTwo.water + totalCleaningServices / 3)}
+								<div>Piso 2:</div>
+								<div style={{ color: 'green' }}>Aseo: {Math.ceil(totalCleaningServices / 3)}</div>
+								<div style={{ color: 'blue' }}>Agua: {Math.ceil(floorTwo.water)}</div>
+								<div>
+									<div style={{ color: 'red' }}>Total: </div>
+									<div>{Math.ceil(floorTwo.water + totalCleaningServices / 3)}</div>
 								</div>
 							</div>
+							<br />
 							<div className='col'>
-								Piso 3:
-								<div>Cleaning Services: {Math.ceil(totalCleaningServices / 3)}</div>
-								<div>Water: {Math.ceil(floorThree.water)}</div>
-								<div className='fs-4 text-danger text-center'>
-									Total: <br />
-									{Math.ceil(floorThree.water + totalCleaningServices / 3)}
+								<div>Piso 3:</div>
+								<div style={{ color: 'green' }}>Aseo: {Math.ceil(totalCleaningServices / 3)}</div>
+								<div style={{ color: 'blue' }}>Agua: {Math.ceil(floorThree.water)}</div>
+								<div>
+									<div style={{ color: 'red' }}>Total: </div>
+									<div>{Math.ceil(floorThree.water + totalCleaningServices / 3)}</div>
 								</div>
 							</div>
 						</div>
